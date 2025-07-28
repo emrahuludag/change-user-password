@@ -15,12 +15,14 @@ This Ansible playbook generates a random password for a specified user, sets it 
 
 
 ##  File Structure
+
+```bash
 .
 ├── change-user-password.yml
 ├── ansible.cfg
 ├── inventory
 └── passwords.csv         # (created automatically after execution)
-
+```
 
 ##  How to Use
 
@@ -30,7 +32,7 @@ Run the playbook with the required `user` variable:
 git clone https://github.com/emrahuludag/change-user-password.git
 
 ansible-playbook change-user-password.yml -e user=myuser
-
+```
 
 ---
 ##  CSV Output
@@ -39,7 +41,7 @@ A file named passwords.csv will be created (or overwritten) on the local Ansible
 ```bash
 Date,Hostname,IP,user,Password
 2025-07-28,host01,192.168.1.10,myuser,XyZ1234secure
-
+```
 
 ---
 ## Security Warning
